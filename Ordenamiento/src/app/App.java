@@ -13,18 +13,21 @@ public class App {
 		int[] arrNoOrdenado, arrOrdenado;
 		Random rn = new Random();
 
-		int longitud = 0, opcion = 0;
+		int longitud = 0, opcion = 0, aleatorio=0;
 		entrada = new Scanner(System.in);
 
-		//System.out.print("Ingrese la cantidad de elementos del arreglo: ");
+	
 		System.out.print("Ingrese el numero de elementos del arreglo: ");
 		longitud = entrada.nextInt();
 
+		System.out.print("Ingrese el maximo valor aleatorio: ");
+		aleatorio = entrada.nextInt();
+		
 		arrNoOrdenado = new int[longitud];
 		arrOrdenado = new int[longitud];
 
 		for (int i = 0; i < longitud; i++) {
-			arrNoOrdenado[i] = rn.nextInt(20) + 1;
+			arrNoOrdenado[i] = rn.nextInt(aleatorio) + 1;
 		}
 		System.out.println("Areglo Desordenado: "
 				+ Arrays.toString(arrNoOrdenado));
